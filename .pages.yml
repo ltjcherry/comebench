@@ -229,6 +229,15 @@ content:
                 type: object
                 list: true
                 fields:
+                  - name: id
+                    label: 任务编号
+                    type: string
+                  - name: video
+                    label: 演示视频路径
+                    type: string
+                  - name: poster
+                    label: 视频封面路径
+                    type: string
                   - name: tag
                     label: 分类标签
                     type: string

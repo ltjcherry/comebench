@@ -95,18 +95,27 @@
       "heading": "The task suite",
       "description": "The suite includes 12 general loco-manipulation tasks, 4 memory-dependent tasks, and 4 long-horizon tasks.",
       "items": [
-        { "tag": "Dimension A", "tagColor": "a", "title": "Task name", "text": "One sentence describing what the model has to do." },
-        { "tag": "Dimension A", "tagColor": "a", "title": "Task name", "text": "One sentence describing what the model has to do." },
-        { "tag": "Dimension B", "tagColor": "b", "title": "Task name", "text": "One sentence describing what the model has to do." },
-        { "tag": "Dimension B", "tagColor": "b", "title": "Task name", "text": "One sentence describing what the model has to do." },
-        { "tag": "Dimension C", "tagColor": "c", "title": "Task name", "text": "One sentence describing what the model has to do." },
-        { "tag": "Dimension C", "tagColor": "c", "title": "Task name", "text": "One sentence describing what the model has to do." },
-        { "tag": "Dimension D", "tagColor": "d", "title": "Task name", "text": "One sentence describing what the model has to do." },
-        { "tag": "Dimension D", "tagColor": "d", "title": "Task name", "text": "One sentence describing what the model has to do." }
-      ],
-      "moreLabel": "+ 4 more tasks",
-      "moreText": "See the full list →",
-      "moreUrl": ""
+        {"id": "A1", "tag": "General loco-manipulation", "tagColor": "a", "title": "Close the drawer", "text": "Walk to the table and close the open drawer.", "video": "assets/tasks/a1.mp4", "poster": "assets/tasks/a1.jpg"},
+        {"id": "A2", "tag": "General loco-manipulation", "tagColor": "a", "title": "Transfer fruit to a plate", "text": "Move fruit from one table to the plate on another.", "video": "assets/tasks/a2.mp4", "poster": "assets/tasks/a2.jpg"},
+        {"id": "A3", "tag": "General loco-manipulation", "tagColor": "a", "title": "Carry the basket", "text": "Transport the storage basket to the marked area on the other table.", "video": "assets/tasks/a3.mp4", "poster": "assets/tasks/a3.jpg"},
+        {"id": "A4", "tag": "General loco-manipulation", "tagColor": "a", "title": "Sort two fruits", "text": "Pick up one fruit with each hand and place each on its designated plate.", "video": "assets/tasks/a4.mp4", "poster": "assets/tasks/a4.jpg"},
+        {"id": "B1", "tag": "General loco-manipulation", "tagColor": "a", "title": "Move a slipper to the upper shelf", "text": "Move a slipper from the lower to the upper shelf.", "video": "assets/tasks/b1.mp4", "poster": "assets/tasks/b1.jpg"},
+        {"id": "B2", "tag": "General loco-manipulation", "tagColor": "a", "title": "Retrieve the basket from the cabinet", "text": "Kneel, retrieve the basket and place it on the counter.", "video": "assets/tasks/b2.mp4", "poster": "assets/tasks/b2.jpg"},
+        {"id": "B3", "tag": "General loco-manipulation", "tagColor": "a", "title": "Put the bear in the drawer", "text": "Put the toy bear in the drawer and close it.", "video": "assets/tasks/b3.mp4", "poster": "assets/tasks/b3.jpg"},
+        {"id": "B4", "tag": "General loco-manipulation", "tagColor": "a", "title": "Open the cabinet door", "text": "Open the cabinet door while walking.", "video": "assets/tasks/b4.mp4", "poster": "assets/tasks/b4.jpg"},
+        {"id": "C1", "tag": "General loco-manipulation", "tagColor": "a", "title": "Load and push the cart", "text": "Put the fruit in the cart basket and push the cart to the designated location.", "video": "assets/tasks/c1.mp4", "poster": "assets/tasks/c1.jpg"},
+        {"id": "C2", "tag": "General loco-manipulation", "tagColor": "a", "title": "Wipe the table", "text": "Pick up a cloth, wipe the table and release the cloth.", "video": "assets/tasks/c2.mp4", "poster": "assets/tasks/c2.jpg"},
+        {"id": "C3", "tag": "General loco-manipulation", "tagColor": "a", "title": "Pour cereal into a bowl", "text": "Pour cereal from a cup into a bowl and put the cup down.", "video": "assets/tasks/c3.mp4", "poster": "assets/tasks/c3.jpg"},
+        {"id": "C4", "tag": "General loco-manipulation", "tagColor": "a", "title": "Use the pedal bin", "text": "Pick up trash and deposit it in a pedal bin.", "video": "assets/tasks/c4.mp4", "poster": "assets/tasks/c4.jpg"},
+        {"id": "M1", "tag": "Memory-dependent", "tagColor": "b", "title": "Carry trash to the bin", "text": "Pick up trash and carry it to the previously seen bin.", "video": "assets/tasks/m1.mp4", "poster": "assets/tasks/m1.jpg"},
+        {"id": "M2", "tag": "Memory-dependent", "tagColor": "b", "title": "Select the designated basket", "text": "Place the bottle in the previously designated basket.", "video": "assets/tasks/m2.mp4", "poster": "assets/tasks/m2.jpg"},
+        {"id": "M3", "tag": "Memory-dependent", "tagColor": "b", "title": "Resume flipping after an interruption", "text": "Flip each scattered block once. Rebuild the collapsed stack when interrupted, then resume flipping.", "video": "assets/tasks/m3.mp4", "poster": "assets/tasks/m3.jpg"},
+        {"id": "M4", "tag": "Memory-dependent", "tagColor": "b", "title": "Retrieve blocks from under cups", "text": "Retrieve the red block from under a cup, deliver it to the cart and return to uncover the blue block.", "video": "assets/tasks/m4.mp4", "poster": "assets/tasks/m4.jpg"},
+        {"id": "H1", "tag": "Long-horizon", "tagColor": "d", "title": "Tidy the table", "text": "Push the cart to the table, tidy the table and place the fruit basket on it.", "video": "assets/tasks/h1.mp4", "poster": "assets/tasks/h1.jpg"},
+        {"id": "H2", "tag": "Long-horizon", "tagColor": "d", "title": "Deliver office supplies", "text": "Deliver office supplies to the table and shelf, then park the cart.", "video": "assets/tasks/h2.mp4", "poster": "assets/tasks/h2.jpg"},
+        {"id": "H3", "tag": "Long-horizon", "tagColor": "d", "title": "Tidy the living room and store the cart", "text": "Inspect the living room, tidy it as needed, and park the cart beside the cabinet.", "video": "assets/tasks/h3.mp4", "poster": "assets/tasks/h3.jpg"},
+        {"id": "H4", "tag": "Long-horizon", "tagColor": "d", "title": "Restock the table and refrigerator", "text": "Inspect the table and refrigerator, then restock both from the cart.", "video": "assets/tasks/h4.mp4", "poster": "assets/tasks/h4.jpg"}
+      ]
     },
 
     {
@@ -195,23 +204,6 @@
       "note": "Submit your results via the leaderboard form. Entries are verified against the hidden test split before they appear here."
     },
 
-    {
-      "type": "code",
-      "id": "start",
-      "nav": "Get started",
-      "alternate": false,
-      "eyebrow": "Get started",
-      "heading": "Run it in four steps",
-      "description": "",
-      "filename": "terminal",
-      "code": "# 1. get the code\ngit clone https://github.com/<org>/CoMeBench\ncd CoMeBench\n\n# 2. install dependencies\npip install -e .\n\n# 3. download the data\npython scripts/download.py --root ./data\n\n# 4. evaluate your model\npython eval.py --model your-model --split test",
-      "steps": [
-        { "title": "Clone & install", "text": "Requires Python 3.10+ and a single GPU." },
-        { "title": "Download data", "text": "~2.4 GB compressed, checksum-verified." },
-        { "title": "Plug in a model", "text": "Implement one predict() function, or use a bundled baseline." },
-        { "title": "Submit", "text": "Export predictions and upload to the leaderboard." }
-      ]
-    },
 
     {
       "type": "code",

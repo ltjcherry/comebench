@@ -206,10 +206,11 @@
           return `<article class="task">
             <div class="task-top">
               <span class="tag${color}">${esc(it.tag)}</span>
-              <span class="task-no">${String(i + 1).padStart(2, '0')}</span>
+              <span class="task-no">${esc(it.id || String(i + 1).padStart(2, '0'))}</span>
             </div>
             <h3>${md(it.title)}</h3>
             <p>${md(it.text)}</p>
+            ${it.video ? `<video class="task-video" controls playsinline preload="none" poster="${esc(it.poster || '')}" aria-label="${esc(it.id)}: ${esc(it.title)}"><source src="${esc(it.video)}" type="video/mp4"></video>` : ''}
           </article>`;
         })
         .join('');

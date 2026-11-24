@@ -1035,3 +1035,36 @@ code { font-family: var(--mono); }
     transition-duration: .001ms !important;
   }
 }
+
+/* Overlay the sticky navigation on the opening video. */
+body:has(.hero-video) .nav {
+  position: fixed;
+  inset-inline: 0;
+}
+body:has(.hero-video) .nav:not(.is-stuck) {
+  background: rgba(12, 16, 24, .25);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+body:has(.hero-video) .nav:not(.is-stuck) .nav-brand img { content: url("assets/logo-light.svg"); }
+body:has(.hero-video) .nav:not(.is-stuck) .btn-ghost { color: white; background: rgba(0,0,0,.35); }
+body:has(.hero-video) .nav:not(.is-stuck) .nav-toggle span { background: white; }
+@media (min-width: 901px) {
+  body:has(.hero-video) .nav:not(.is-stuck) .nav-links a { color: white; }
+}
+.hero.hero-video {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  align-items: center;
+  padding-block: calc(var(--nav-h) + 20px) 24px;
+}
+.task-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  margin-top: 14px;
+  background: #101316;
+  border-radius: 8px;
+}
