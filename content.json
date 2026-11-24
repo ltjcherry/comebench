@@ -15,7 +15,7 @@
       {"name": "Ji Wang", "sup": "2", "url": "https://openreview.net/profile?id=~Ji_Wang7"}
     ],
     "affiliations": ["University of the Chinese Academy of Sciences", "National University of Defense Technology", "Noetic Robotics", "Northwest Polytechnical University", "Beijing University of Posts and Telecommunications"],
-    "affilNotes": "* Huangyu and Tianjiao Liang contributed equally.",
+    "affilNotes": "* These authors contributed equally to this work.",
     "links": {
       "paper": "",
       "project": "https://github.com/ltjcherry/comebench",
@@ -46,21 +46,21 @@
       "eyebrow": "Overview",
       "heading": "Why CoMeBench",
       "paragraphs": [
-        "**CoMeBench** is a benchmark for …. It provides a unified, reproducible evaluation protocol so that results across papers are directly comparable, and it ships with a public dataset, evaluation scripts and a maintained leaderboard.",
-        "Write two or three sentences on the gap you are filling: what existing benchmarks miss, and what CoMeBench does differently. Keep it concrete — a number or a concrete failure mode of prior work reads far better than an adjective.",
-        "Every task is language-conditioned, and the whole suite can be run locally in under an hour on a single GPU."
+        "A humanoid clearing a table sees the bin before it picks up the trash. Once the bin is out of view, the robot must remember which way to turn and hold on to the trash as it walks. Turning the wrong way and dropping the trash can produce the same task score, even though they reveal different failures.",
+        "**CoMeBench** represents each task as a graph of skills. Each skill has a contract that specifies what must be true before it starts, what must remain true during execution, and what it must achieve. In the bin task, the first turn tests whether the robot recalls the destination. Keeping the trash in hand tests whether it can execute the transfer.",
+        "Across 20 real-world tasks, CoMeBench reports task success, skill success, and how far a policy progresses through a valid sequence of skills. Keyframes mark subtask boundaries in the demonstrations. During evaluation, the first observed contract violation identifies where execution broke down."
       ],
       "aside": {
         "title": "At a glance",
         "rows": [
-          { "label": "Release", "value": "v1.0 · Nov 2026" },
-          { "label": "License", "value": "CC BY 4.0" },
-          { "label": "Modality", "value": "Text / Image / Video" },
-          { "label": "Splits", "value": "dev · test · hidden" },
-          { "label": "Metric", "value": "Accuracy · F1" }
+          { "label": "Platform", "value": "Unitree G1 with Dex1 grippers" },
+          { "label": "Task suite", "value": "12 general · 4 memory-dependent · 4 long-horizon" },
+          { "label": "Skill library", "value": "18 primitive skills" },
+          { "label": "Demonstrations", "value": "2.8k trajectories · 40+ hours" },
+          { "label": "Camera views", "value": "Head and both wrists · 30 FPS" }
         ],
-        "buttonLabel": "Download dataset",
-        "buttonUrl": ""
+        "buttonLabel": "Explore the tasks",
+        "buttonUrl": "#benchmark"
       }
     },
 
