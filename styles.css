@@ -1068,3 +1068,8 @@ body:has(.hero-video) .nav:not(.is-stuck) .nav-toggle span { background: white; 
   background: #101316;
   border-radius: 8px;
 }
+.author-name { white-space: nowrap; }
+.author-name a { color: inherit; }
+.author-name a:hover, .author-name a:focus-visible { text-decoration: underline; }
+.research-results th[scope="row"] { white-space: nowrap; text-align: left; }
+.research-results thead th.num { white-space: normal; min-width: 7em; }

@@ -4,13 +4,18 @@
     "venue": "",
     "tagline": "A Contract-Structured Benchmark for Memory-Dependent Humanoid Loco-Manipulation",
     "authors": [
-      { "name": "Author One", "sup": "1" },
-      { "name": "Author Two", "sup": "1,2" },
-      { "name": "Author Three", "sup": "2" },
-      { "name": "Author Four", "sup": "1" }
+      {"name": "Huangyu", "sup": "2,*", "url": "https://openreview.net/profile?id=~Huangyuyu1"},
+      {"name": "Tianjiao Liang", "sup": "1,*", "url": "https://openreview.net/profile?id=~Tianjiao_Liang1"},
+      {"name": "Kexin Zhang", "sup": "3", "url": "https://openreview.net/profile?id=~Kexin_Zhang22"},
+      {"name": "Chenghao Sun", "sup": "4", "url": "https://openreview.net/profile?id=~Chenghao_Sun3"},
+      {"name": "Ziyang Dong", "sup": "3", "url": "https://openreview.net/profile?id=~Ziyang_Dong1"},
+      {"name": "Xiaodong Zhang", "sup": "5", "url": "https://openreview.net/profile?id=~Xiaodong_Zhang19"},
+      {"name": "Wenhao Cui", "sup": "3", "url": "https://openreview.net/profile?id=~Wenhao_Cui2"},
+      {"name": "Honggang Qi", "sup": "1", "url": "https://openreview.net/profile?id=~Honggang_Qi1"},
+      {"name": "Ji Wang", "sup": "2", "url": "https://openreview.net/profile?id=~Ji_Wang7"}
     ],
-    "affiliations": ["Your University", "Your Lab / Institute"],
-    "affilNotes": "",
+    "affiliations": ["University of the Chinese Academy of Sciences", "National University of Defense Technology", "Noetic Robotics", "Northwest Polytechnical University", "Beijing University of Posts and Telecommunications"],
+    "affilNotes": "* Huangyu and Tianjiao Liang contributed equally.",
     "links": {
       "paper": "",
       "project": "https://github.com/ltjcherry/comebench",
@@ -19,7 +24,7 @@
       "github": "",
       "leaderboard": null
     },
-    "citation": "@misc{yourtag2026comebench,\n  title  = {CoMeBench: A Benchmark for …},\n  author = {Last, First and Last, First},\n  year   = {2026},\n  note   = {arXiv preprint / dataset release},\n  url    = {https://…}\n}"
+    "citation": "@misc{comebench2026,\n  title = {CoMeBench: A Contract-Structured Benchmark for Memory-Dependent Humanoid Loco-Manipulation},\n  author = {Huangyu and Tianjiao Liang and Kexin Zhang and Chenghao Sun and Ziyang Dong and Xiaodong Zhang and Wenhao Cui and Honggang Qi and Ji Wang},\n  year = {2026},\n  url = {https://ltjcherry.github.io/comebench/}\n}"
   },
 
   "hero": {
@@ -189,22 +194,273 @@
     {
       "type": "table",
       "id": "leaderboard",
-      "nav": "Leaderboard",
+      "nav": "Results",
       "alternate": true,
-      "eyebrow": "Leaderboard",
-      "heading": "Current results",
-      "description": "Numbers below are placeholders — replace them with your own evaluation results.",
-      "columns": ["Dimension A", "Dimension B", "Dimension C", "Dimension D"],
-      "rows": [
-        { "model": "Your model", "badge": "ours", "isOurs": true, "cells": ["—", "—", "—", "—"], "average": "—" },
-        { "model": "Baseline B", "badge": "", "isOurs": false, "cells": ["—", "—", "—", "—"], "average": "—" },
-        { "model": "Baseline A", "badge": "", "isOurs": false, "cells": ["—", "—", "—", "—"], "average": "—" },
-        { "model": "Human performance", "badge": "upper bound", "isOurs": false, "ghost": true, "cells": ["—", "—", "—", "—"], "average": "—" }
+      "eyebrow": "Experimental results",
+      "heading": "Policy evaluation on CoMeBench",
+      "description": "All metrics are percentages. Higher values indicate better performance.",
+      "columns": [
+        "Overall task success",
+        "Skill success",
+        "Progress score",
+        "General task success",
+        "Memory first-choice accuracy",
+        "Long-horizon multi-goal success"
       ],
-      "note": "Submit your results via the leaderboard form. Entries are verified against the hidden test split before they appear here."
+      "rows": [
+        {
+          "model": "OpenVLA",
+          "cells": [
+            "4",
+            "7.2",
+            "5.2",
+            "6.7",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "model": "π₀-FAST",
+          "cells": [
+            "8",
+            "13.5",
+            "10.2",
+            "12.6",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "model": "GR00T N1.7",
+          "cells": [
+            "37",
+            "65.9",
+            "59.2",
+            "48.3",
+            "20",
+            "76"
+          ]
+        },
+        {
+          "model": "DM0.5",
+          "cells": [
+            "47",
+            "73.2",
+            "60",
+            "56",
+            "85",
+            "53"
+          ]
+        },
+        {
+          "model": "π₀.₅",
+          "cells": [
+            "15",
+            "25",
+            "21",
+            "25",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "model": "π₀",
+          "cells": [
+            "8",
+            "12.3",
+            "9.3",
+            "11",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "model": "Ψ₀",
+          "cells": [
+            "22",
+            "50.8",
+            "33.6",
+            "28",
+            "5",
+            "45"
+          ]
+        },
+        {
+          "model": "LingBot-VLA",
+          "cells": [
+            "43",
+            "77.2",
+            "69.2",
+            "54.7",
+            "20",
+            "52"
+          ]
+        },
+        {
+          "model": "MemoryVLA",
+          "cells": [
+            "25",
+            "37.6",
+            "34.7",
+            "27",
+            "60",
+            "45"
+          ]
+        },
+        {
+          "model": "WholeBodyMem",
+          "cells": [
+            "34",
+            "58.4",
+            "63.8",
+            "59.7",
+            "40",
+            "57"
+          ]
+        },
+        {
+          "model": "DreamZero",
+          "cells": [
+            "17",
+            "48.2",
+            "25.7",
+            "23",
+            "5",
+            "20"
+          ]
+        },
+        {
+          "model": "WB-WAM",
+          "cells": [
+            "1",
+            "3.4",
+            "1.6",
+            "6.3",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "model": "ω-0",
+          "cells": [
+            "2",
+            "5.3",
+            "3.4",
+            "13",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "note": "Skill success is averaged across skill types with observed attempts. Progress measures how much of the required skill sequence is completed consecutively from the start."
     },
-
-
+    {
+      "type": "table",
+      "id": "memory-results",
+      "nav": "",
+      "alternate": false,
+      "eyebrow": "Memory-dependent tasks",
+      "heading": "Decisions after a cue leaves view",
+      "description": "M1 tests the first turn toward a previously seen bin. M2 tests basket selection, M3 tests resumption after an interruption, and M4 tests the first cup selected.",
+      "columns": [
+        "M1 task success",
+        "M1 first direction",
+        "M2 task success",
+        "M2 first target",
+        "M3 task success",
+        "M3 resumption",
+        "M4 task success",
+        "M4 first cup",
+        "Mean progress"
+      ],
+      "rows": [
+        {
+          "model": "π₀.₅",
+          "cells": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "3"
+          ]
+        },
+        {
+          "model": "GR00T N1.7",
+          "cells": [
+            "0",
+            "40",
+            "0",
+            "20",
+            "0",
+            "0",
+            "0",
+            "0",
+            "8"
+          ]
+        },
+        {
+          "model": "Ψ₀",
+          "cells": [
+            "0",
+            "20",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "5"
+          ]
+        },
+        {
+          "model": "WholeBodyMem",
+          "cells": [
+            "40",
+            "40",
+            "60",
+            "60",
+            "20",
+            "40",
+            "20",
+            "20",
+            "48"
+          ]
+        },
+        {
+          "model": "DM0.5",
+          "cells": [
+            "40",
+            "60",
+            "100",
+            "100",
+            "60",
+            "100",
+            "60",
+            "80",
+            "82"
+          ]
+        },
+        {
+          "model": "MemoryVLA",
+          "cells": [
+            "40",
+            "40",
+            "80",
+            "80",
+            "20",
+            "60",
+            "20",
+            "60",
+            "37"
+          ]
+        }
+      ],
+      "note": "All values are percentages. Mean progress gives equal weight to each of the four tasks."
+    },
     {
       "type": "code",
       "id": "cite",

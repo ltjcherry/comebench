@@ -88,7 +88,7 @@
     const hasVideo = !!(h.video && String(h.video).trim());
 
     const authors = (s.authors || [])
-      .map((a) => `<span>${esc(a.name)}${a.sup ? `<sup>${esc(a.sup)}</sup>` : ''}</span>`)
+      .map((a) => `<span class="author-name">${a.url ? `<a href="${navHref(a.url)}">${esc(a.name)}</a>` : esc(a.name)}${a.sup ? `<sup>${esc(a.sup)}</sup>` : ''}</span>`)
       .join(', ');
 
     const affils = (s.affiliations || [])
@@ -101,7 +101,7 @@
       ['Project', 'code', L.project || L.code, ''],
       ['Dataset', 'dataset', L.dataset, ''],
       ['Checkpoints', 'checkpoints', L.checkpoints, ''],
-      ['Leaderboard', 'chart', L.leaderboard || '#leaderboard', '']
+      ['Results', 'chart', L.leaderboard || '#leaderboard', '']
     ]
       .map(
         ([label, icon, url, cls]) => label === 'Checkpoints' && !url
@@ -276,6 +276,13 @@
         .map((c) => `<th class="num">${esc(c)}</th>`)
         .join('');
 
+      if (!(sec.rows || []).some(row => row.average != null)) {
+        const rows = (sec.rows || []).map(row => `<tr><th scope="row">${esc(row.model)}</th>
+          ${row.cells.map(cell => `<td class="num">${esc(cell)}</td>`).join('')}</tr>`).join('');
+        return `<div class="table-wrap"><table class="leaderboard research-results" aria-label="${esc(sec.heading)}">
+          <thead><tr><th scope="col">Model</th>${cols}</tr></thead><tbody>${rows}</tbody>
+          </table></div>${sec.note ? `<p class="table-note">${md(sec.note)}</p>` : ''}`;
+      }
       let rank = 0;
       const rows = (sec.rows || [])
         .map((r) => {

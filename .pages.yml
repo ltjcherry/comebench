@@ -43,6 +43,9 @@ content:
               - name: name
                 label: 姓名
                 type: string
+              - name: url
+                label: OpenReview 主页
+                type: string
               - name: sup
                 label: 单位编号（上标）
                 type: string
