@@ -38,6 +38,7 @@
   const ICONS = {
     paper: '<path d="M6 2h9l5 5v15H6V2Z"/>',
     code: '<path d="m8 6-6 6 6 6M16 6l6 6-6 6"/>',
+    checkpoints: '<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/>',
     dataset:
       '<path d="M12 3c4.4 0 8 1.3 8 3s-3.6 3-8 3-8-1.3-8-3 3.6-3 8-3Z"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/>',
     chart: '<path d="M3 3v18h18"/><path d="m7 15 4-5 3 3 5-7"/>',
@@ -97,12 +98,15 @@
     const L = s.links || {};
     const cta = [
       ['Paper', 'paper', L.paper, 'btn-primary'],
-      ['Code', 'code', L.code, ''],
+      ['Project', 'code', L.project || L.code, ''],
       ['Dataset', 'dataset', L.dataset, ''],
+      ['Checkpoints', 'checkpoints', L.checkpoints, ''],
       ['Leaderboard', 'chart', L.leaderboard || '#leaderboard', '']
     ]
       .map(
-        ([label, icon, url, cls]) => `
+        ([label, icon, url, cls]) => label === 'Checkpoints' && !url
+          ? '<span class="btn" aria-disabled="true">Checkpoints <small>(pending)</small></span>'
+          : `
         <a class="btn ${cls}" href="${navHref(url)}">
           <svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[icon]}</svg>
           ${label}
@@ -346,7 +350,7 @@
           <p>${md(s.tagline || '')}</p>
         </div>
         <div class="footer-links">
-          ${link('Paper', L.paper)}${link('Code', L.code)}${link('Dataset', L.dataset)}${link(
+          ${link('Paper', L.paper)}${link('Project', L.project || L.code)}${link('Dataset', L.dataset)}${link(
             'Citation',
             '#cite'
           )}

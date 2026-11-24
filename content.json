@@ -1,8 +1,8 @@
 {
   "site": {
     "title": "CoMeBench",
-    "venue": "Under review · 2026",
-    "tagline": "A **benchmark** for evaluating models on …",
+    "venue": "",
+    "tagline": "A Contract-Structured Benchmark for Memory-Dependent Humanoid Loco-Manipulation",
     "authors": [
       { "name": "Author One", "sup": "1" },
       { "name": "Author Two", "sup": "1,2" },
@@ -13,7 +13,8 @@
     "affilNotes": "",
     "links": {
       "paper": "",
-      "code": "",
+      "project": "https://github.com/ltjcherry/comebench",
+      "checkpoints": "",
       "dataset": "",
       "github": "",
       "leaderboard": null
@@ -25,10 +26,10 @@
     "video": "assets/openhlm-hero.mp4",
     "poster": "assets/hero-poster.jpg",
     "stats": [
-      { "value": "12", "label": "Tasks" },
-      { "value": "4", "label": "Capability dimensions" },
-      { "value": "18k", "label": "Instances" },
-      { "value": "9", "label": "Baseline models" }
+      { "value": "20", "label": "Tasks" },
+      { "value": "3", "label": "Task categories" },
+      { "value": "2.8k", "label": "Trajectories" },
+      { "value": "40+", "label": "Hours of demonstrations" }
     ]
   },
 
@@ -92,7 +93,7 @@
       "alternate": false,
       "eyebrow": "Benchmark",
       "heading": "The task suite",
-      "description": "Tasks are grouped into four capability dimensions. Replace the cards below with your real task names and one-line descriptions.",
+      "description": "The suite includes 12 general loco-manipulation tasks, 4 memory-dependent tasks, and 4 long-horizon tasks.",
       "items": [
         { "tag": "Dimension A", "tagColor": "a", "title": "Task name", "text": "One sentence describing what the model has to do." },
         { "tag": "Dimension A", "tagColor": "a", "title": "Task name", "text": "One sentence describing what the model has to do." },

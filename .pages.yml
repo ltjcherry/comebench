@@ -61,8 +61,11 @@ content:
               - name: paper
                 label: 论文
                 type: string
-              - name: code
-                label: 代码
+              - name: project
+                label: 项目仓库
+                type: string
+              - name: checkpoints
+                label: 模型权重
                 type: string
               - name: dataset
                 label: 数据集
