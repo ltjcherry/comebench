@@ -30,7 +30,7 @@ CoMeBench-site/
 
 1. 打开 https://app.pagescms.org
 2. 用 GitHub 账号登录
-3. 授权后选择仓库 `fzt-bit/CoMeBench`
+3. 授权后选择仓库 `ltjcherry/comebench`
 4. 左侧看到 **「页面内容」**，分成三段：
 
 | 区块 | 能改什么 |
@@ -123,7 +123,7 @@ CoMeBench-site/
 - Branch: `main`，文件夹 `/ (root)`
 - Save
 
-网址：**https://fzt-bit.github.io/CoMeBench/**
+网址：**https://ltjcherry.github.io/comebench/**
 
 > 注意：Pages 的 CDN 会缓存约 10 分钟，改动不会立刻在所有网络生效。
 
